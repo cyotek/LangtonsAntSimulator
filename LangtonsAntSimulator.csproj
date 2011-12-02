@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6FABDF98-88F5-49DC-877C-DC56748132B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LangontsAntSimulator</RootNamespace>
+    <AssemblyName>LangtonsAntSimulator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ant.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\LangtonsAntSimulator.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LangtonsAntSimulator.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActorViewer.Designer.cs">
+      <DependentUpon>ActorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorParameters.cs" />
+    <Compile Include="ColorsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorsDialog.Designer.cs">
+      <DependentUpon>ColorsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewSimulationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewSimulationDialog.Designer.cs">
+      <DependentUpon>NewSimulationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ant.cs" />
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block.cs" />
+    <Compile Include="Direction.cs" />
+    <Compile Include="IActor.cs" />
+    <Compile Include="IBlock.cs" />
+    <Compile Include="ISimulation.cs" />
+    <Compile Include="ISimulationHost.cs" />
+    <Compile Include="LangtonsAntSimulation.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PauseOnMoveDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PauseOnMoveDialog.Designer.cs">
+      <DependentUpon>PauseOnMoveDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DelayDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelayDialog.Designer.cs">
+      <DependentUpon>DelayDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAntsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAntsDialog.Designer.cs">
+      <DependentUpon>AddAntsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimulationPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SimulationPanel.Designer.cs">
+      <DependentUpon>SimulationPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimulationStartParameters.cs" />
+    <EmbeddedResource Include="AboutDialog.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActorViewer.resx">
+      <DependentUpon>ActorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorsDialog.resx">
+      <DependentUpon>ColorsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewSimulationDialog.resx">
+      <DependentUpon>NewSimulationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PauseOnMoveDialog.resx">
+      <DependentUpon>PauseOnMoveDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelayDialog.resx">
+      <DependentUpon>DelayDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAntsDialog.resx">
+      <DependentUpon>AddAntsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1 ant move 15000.ant">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="20 ants move 15000.ant">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="20 ants move 4000.ant">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\image-export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control-pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control-stop-square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control-skip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bug--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1 ant move 15000.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="20 ants move 15000.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="20 ants move 4000.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="ant.ico" />
+    <None Include="Resources\ant-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
